@@ -98,11 +98,8 @@ The WombGuard web platform will be deployed on [Render](https://render.com) for 
 4. Expanding the platform to a complete web interface for patient input and prediction results display.
 
 ## Video Demo
-
-A demonstration of the platform is included in:
-
 ```
-video_demo/wombguard_demo.mp4
+[video_demo/wombguard_demo.mp4](https://youtu.be/eSwuXgh3sZM)
 ```
 
 The demo highlights:
