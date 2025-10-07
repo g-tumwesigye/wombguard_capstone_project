@@ -12,7 +12,7 @@ This submission demonstrates the **initial software product**, including the pre
 
 ## Project Structure
 ```
-
+```bash
 wombguard_capstone_project/
 │
 ├─ README.md
