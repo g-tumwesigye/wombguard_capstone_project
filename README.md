@@ -1,6 +1,5 @@
-Here’s a ready-to-use **README.md** draft for your submission:
 
-```markdown
+```bash
 # WombGuard Pregnancy Predictive Platform
 
 ## Description
