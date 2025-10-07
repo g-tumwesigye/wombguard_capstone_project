@@ -99,7 +99,7 @@ The WombGuard web platform will be deployed on [Render](https://render.com) for 
 
 ## Video Demo
 ```
-[video_demo/wombguard_demo.mp4](https://youtu.be/eSwuXgh3sZM)
+[Click to Watch the Demo Video](https://www.youtube.com/watch?v=eSwuXgh3sZM)
 ```
 
 The demo highlights:
