@@ -3,7 +3,7 @@
 ## Description
 WombGuard is a web platform designed to support healthcare providers and patients in assessing pregnancy risk levels. It combines **predictive analytics** and a **Conversational ChatBot** to provide personalized guidance.  
 
-The predictive component uses a trained Random Forest machine learning model to analyze patient data—including age, blood pressure, blood sugar, body temperature, BMI, and heart rate—to predict pregnancy risk as either low or high. Predictions include probability scores and confidence levels, giving users clear and actionable insights.  
+The predictive component uses a trained Random Forest machine learning model to analyze patient data, including age, blood pressure, blood sugar, body temperature, BMI, and heart rate—to predict pregnancy risk as either low or high. Predictions include probability scores and confidence levels, giving users clear and actionable insights.  
 
 The Conversational ChatBot, which is planned for future development and integration, will allow users to interactively ask questions, receive explanations for predictions, and obtain personalized guidance. This combination of predictive modeling and conversational AI will make the platform both informative and user-friendly, enabling more accessible healthcare support.  
 
