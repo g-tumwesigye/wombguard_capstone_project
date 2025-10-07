@@ -1,117 +1,52 @@
-
-# WombGuard Pregnancy Predictive Platform
+# WombGuard
 
 ## Description
-WombGuard is a web-based predictive platform designed to assess pregnancy risk using patient clinical data. The platform uses a trained Random Forest machine learning model to provide risk predictions with confidence scores. The system also includes SHAP-based explainability to interpret model outputs.
+WombGuard is a web platform designed to support healthcare providers and patients in assessing pregnancy risk levels. It combines **predictive analytics** with a planned **Conversational ChatBot** to provide a comprehensive digital healthcare tool.  
 
-This submission demonstrates the **initial software product**, including the predictive API and deployment-ready model.
+The predictive component uses a trained Random Forest machine learning model to analyze patient data—including age, blood pressure, blood sugar, body temperature, BMI, and heart rate—to predict pregnancy risk as either low or high. Predictions include probability scores and confidence levels, giving users clear and actionable insights.  
+
+The Conversational ChatBot, which is planned for future development and integration, will allow users to interactively ask questions, receive explanations for predictions, and obtain personalized guidance. This combination of predictive modeling and conversational AI will make the platform both informative and user-friendly, enabling more accessible healthcare support.  
 
 ## GitHub Repository
-[Link to your GitHub repo](https://github.com/yourusername/wombguard_capstone_project)
+[https://github.com/YourUsername/wombguard_capstone_project](https://github.com/YourUsername/wombguard_capstone_project)
 
-## Project Structure
-```
-wombguard_capstone_project/
-│
-├─ README.md
-├─ requirements.txt
-├─ wombguard_pregnancy_model.pkl
-├─ shap_analysis_insights.json
-├─ main.py
-├─ video_demo/
-│    └─ wombguard_demo.mp4
-└─ venv/  # Optional, not necessary to include in repo
+## Environment Setup and Project Instructions
 
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/YourUsername/wombguard_capstone_project.git
+   cd wombguard_capstone_project
 ````
 
-## Environment Setup
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/wombguard_capstone_project.git
-cd wombguard_capstone_project
-````
+2. **Create a virtual environment and activate it**
 
-2. Create a virtual environment and activate it:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # macOS/Linux
+   venv\Scripts\activate      # Windows
+   ```
 
-```bash
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
-```
+3. **Install dependencies**
 
-3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-```bash
-pip install -r requirements.txt
-```
+4. **Run the FastAPI server locally**
 
-## Running the Platform
+   ```bash
+   uvicorn main:app --reload
+   ```
 
-Start the FastAPI app:
-
-```bash
-python -m uvicorn main:app --reload
-```
-
-Open your browser and go to:
-
-```
-http://127.0.0.1:8000
-```
-
-You can test the API endpoints via the **Swagger UI** available at:
-
-```
-http://127.0.0.1:8000/docs
-```
-
-## API Endpoints
-
-* `GET /` – Returns a success message if the API is running.
-* `POST /predict` – Accepts patient data in JSON format and returns predicted pregnancy risk with probability and confidence score.
-
-### Example JSON for `/predict`:
-
-```json
-{
-  "features": {
-    "Age": 28,
-    "Systolic_BP": 118,
-    "Diastolic": 78,
-    "BS": 4.5,
-    "Body_Temp": 36.8,
-    "BMI": 23.5,
-    "Heart_Rate": 80
-  }
-}
-```
+5. **Access the API documentation (Swagger UI)**
+   Open [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) in your browser to interact with the predictive API.
 
 ## Deployment Plan
 
-* The model is saved with preprocessing and can be deployed as a web API using FastAPI.
-* Swagger UI provides a simple interface for testing endpoints.
-* Future plans: integrate with a full web interface or mobile app for clinical use.
+The WombGuard web platform will be deployed on [Render](https://render.com) for public access. Deployment includes:
 
-## Video Demo
+1. Exposing FastAPI endpoints for the predictive model.
+2. Using Swagger UI to demonstrate predictions.
+3. Integrating the Conversational ChatBot for interactive guidance and explanations in the near future.
+4. Expanding the platform to a complete web interface for patient input and prediction results display.
 
-A demonstration of the platform is included in:
-
-```
-video_demo/wombguard_demo.mp4
-```
-
-The demo highlights:
-
-* Running the FastAPI server
-* Accessing the Swagger UI
-* Making predictions with sample patient data
-* Displaying predicted risk and confidence
-
-## Notes
-
-* This submission focuses on the initial software demo.
-* The user interface is currently via **Swagger UI**, not a full web app.
-
-```
-
-```
