@@ -8,7 +8,7 @@ The predictive component uses a trained Random Forest machine learning model to 
 The Conversational ChatBot, which is planned for future development and integration, will allow users to interactively ask questions, receive explanations for predictions, and obtain personalized guidance. This combination of predictive modeling and conversational AI will make the platform both informative and user-friendly, enabling more accessible healthcare support.  
 
 ## GitHub Repository
-[https://github.com/YourUsername/wombguard_capstone_project](https://github.com/g-tumwesigye/wombguard_capstone_project)
+[https://github.com/wombguard_capstone_project](https://github.com/g-tumwesigye/wombguard_capstone_project)
 
 ## Project Structure
 ```
