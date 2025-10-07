@@ -11,7 +11,6 @@ This submission demonstrates the **initial software product**, including the pre
 
 ## Project Structure
 ```
-```bash
 wombguard_capstone_project/
 │
 ├─ README.md
@@ -115,5 +114,4 @@ The demo highlights:
 
 ```
 
-I can also draft a **short script for your 5-minute video demo** so you can record it immediately. Do you want me to do that next?
 ```
