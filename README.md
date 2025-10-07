@@ -1,4 +1,4 @@
-
+Here’s a ready-to-use **README.md** draft for your submission:
 
 ```markdown
 # WombGuard Pregnancy Predictive Platform
@@ -117,4 +117,5 @@ The demo highlights:
 
 ```
 
+I can also draft a **short script for your 5-minute video demo** so you can record it immediately. Do you want me to do that next?
 ```
