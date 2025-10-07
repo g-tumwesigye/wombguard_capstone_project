@@ -1,5 +1,4 @@
 
-```bash
 # WombGuard Pregnancy Predictive Platform
 
 ## Description
