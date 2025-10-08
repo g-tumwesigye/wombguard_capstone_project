@@ -5,10 +5,10 @@ import numpy as np
 import pandas as pd
 from fastapi.middleware.cors import CORSMiddleware
 
-# Initialize app
+# Initializing the app
 app = FastAPI(title="WombGuard Pregnancy Predictive API")
 
-# Allow all origins (for frontend integration)
+# Allowing all origins 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -17,7 +17,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Load model package
+# Loading the model package
 try:
     package = joblib.load("wombguard_pregnancy_model.pkl")
     model = package["model"]
@@ -43,13 +43,13 @@ def home():
 @app.post("/predict")
 def predict_pregnancy_risk(features: PatientData):
     try:
-        # Convert to DataFrame with correct column order
+        # Converting to DataFrame with correct column order
         patient_df = pd.DataFrame([features.dict()])[feature_names]
 
-        # Scale data
+        # Scaling data
         patient_scaled = scaler.transform(patient_df)
 
-        # Try classification prediction
+        # Trying classification prediction
         try:
             probabilities = model.predict_proba(patient_scaled)
             # If model gives 2 probabilities (for 2 classes)
@@ -58,20 +58,20 @@ def predict_pregnancy_risk(features: PatientData):
             else:
                 prob_high_risk = probabilities[:, 0]
         except AttributeError:
-            # Model is a regressor
+        
             prob_high_risk = model.predict(patient_scaled)
 
-        # Ensure numeric output
+        # Ensuring numeric output
         prob_high_risk = np.clip(prob_high_risk, 0, 1)
 
-        # Convert to labels
+        # Converting to labels
         predictions = (prob_high_risk >= 0.5).astype(int)
         risk_levels = ["Low Risk" if p == 0 else "High Risk" for p in predictions]
 
         # Confidence
         confidence_scores = np.maximum(prob_high_risk, 1 - prob_high_risk)
 
-        # Prepare response
+        # Preparing response
         response = {
             "prediction": {
                 "Predicted_Risk_Level": risk_levels[0],
